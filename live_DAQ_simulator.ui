@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_window</class>
+ <widget class="QMainWindow" name="main_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <underline>false</underline>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Live DAQ Simulator</string>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" rowspan="2">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>671</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="start_button">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 253, 255);</string>
+            </property>
+            <property name="text">
+             <string>START DAQ</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stop_button">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 38, 0);</string>
+            </property>
+            <property name="text">
+             <string>STOP DAQ</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="plot_button">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 253, 255);</string>
+            </property>
+            <property name="text">
+             <string>PLOT</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Data length:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="data_len_label">
+            <property name="font">
+             <font>
+              <italic>true</italic>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Average data rate:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="avg_data_rate_label">
+            <property name="font">
+             <font>
+              <italic>true</italic>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>0 samples/s</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>438</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="PlotWidget" name="plot_1"/>
+        </item>
+        <item>
+         <widget class="PlotWidget" name="plot_2"/>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Add:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="average_cb_1">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(255, 38, 0)</string>
+            </property>
+            <property name="text">
+             <string>Average</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stddev_cb_1">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(4, 51, 255)</string>
+            </property>
+            <property name="text">
+             <string>Stddev</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>68</width>
+            <height>178</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Add:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="average_cb_2">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(255, 38, 0)</string>
+            </property>
+            <property name="text">
+             <string>Average</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="stddev_cb_2">
+            <property name="styleSheet">
+             <string notr="true">color:rgb(4, 51, 255)</string>
+            </property>
+            <property name="text">
+             <string>Stddev</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>68</width>
+            <height>168</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>671</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>1107</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+   <zorder>verticalSpacer_3</zorder>
+   <zorder>horizontalSpacer_2</zorder>
+   <zorder>verticalSpacer_4</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string/>
+    </property>
+    <addaction name="actionNew"/>
+   </widget>
+   <widget class="QMenu" name="menuFile_2">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConnect_equipment"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuFile_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionConnect_equipment">
+   <property name="text">
+    <string>Connect equipment</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
