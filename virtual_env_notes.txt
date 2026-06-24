@@ -14,7 +14,7 @@ $ pip freeze --local > requirements.txt 		# Saves all of the packages installed 
 $ cat requirements.txt 					# Shows all the packages within ‘requirements.txt’. On windows ‘cat’—>’type’
 $ deactivate 						# Exits the virtual environment. On windows may have to use—> ‘project1_env\Scripts\deactivate’
 $ cd							# Move up exactly one level to exit the ‘Environments’ directory
-$ rm -rf project1_env/					# Deletes the virtual environment
+$ rm -rf project1_env/					# Deletes the virtual environment Windows: rmdir /s /q project1_env
 $ virtualenv -p /usr/bin/python2.6 py26_env		# Creates a virtual environment with a specific python version (2.6 shown here), named py26_env
 $ pip install -r requirements.txt			# Installs the required packages in the new python environment
 $ python —version					# Tells you which python version you are working with
