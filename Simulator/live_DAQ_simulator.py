@@ -11,6 +11,10 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow,
                              QDialog, QTableWidget, QTableWidgetItem)
 from PyQt5.QtCore import QTimer, QSize
 
+#print(sys.platform)
+if sys.platform == "win32":
+    import ctypes
+    ctypes.windll.winmm.timeBeginPeriod(1)
 
 class Mode(Enum):
     '''
