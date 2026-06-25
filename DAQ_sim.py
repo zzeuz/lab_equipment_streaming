@@ -46,7 +46,7 @@ class SPMaster(QMainWindow):
     '''
     def __init__(self):
         QMainWindow.__init__(self)
-        uic.loadUi("live_DAQ_simulator.ui", self)
+        uic.loadUi("DAQ_sim.ui", self)
 
         self.plot_1.setTitle("Live Data Streaming", size="14pt")
         self.x_axis_1 = pg.AxisItem("bottom")
