@@ -2,7 +2,7 @@ $ pip install virtualenv 				# Installs the package used to create a virtual pyt
 $ pip list 						# See a ton of global packages on your system
 $ mkdir Environments 					# Creates a new folder in your User directory called ‘Environments’
 $ cd !$ 						# Changes your current directory to the ‘Environments’ folder
-$ ls 							# Lists out everything in your current directory (Environments folder)
+$ ls 							# Lists out everything in your current directory (Environments folder). Windows: dir
 $ virtualenv project1_env 				# Creates a virtual environment called ‘project1_env’ within the folder you navigated to
 $ source project1_env/bin/activate			# Activates the virtual environment created. On windows use—> ‘project1_env\Scripts\activate’
 							# 	you should see (project1_env) once you are inside the virtual environment
