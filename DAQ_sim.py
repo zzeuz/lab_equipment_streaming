@@ -207,6 +207,8 @@ class SPMaster(QMainWindow):
 
     def closeEvent(self, event):
         print("FINISHED", event)
+        if sys.platform == "win32":
+            ctypes.windll.winmm.timeEndPeriod(1)
 
 
 class DAQThread(QtCore.QThread):
